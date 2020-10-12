@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid__container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "sd map" "tl tl";
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    grid-area: sd;
+}
+
+.map {
+    grid-area: map;
+}
+
+.timeline {
+    grid-area: tl;
+}
