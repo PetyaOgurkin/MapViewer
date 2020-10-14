@@ -14,7 +14,6 @@ const projection = new ol.proj.Projection({
     units: 'm'
 });
 
-
 const tiled = [
     new ol.layer.Tile({
         source: new ol.source.XYZ({
@@ -26,34 +25,6 @@ const tiled = [
                 origin: ol.extent.getTopLeft(MapMath.extent.EPSG3576)
             })
         })
-    }),
-    new ol.layer.Image({
-        source: new ol.source.ImageWMS({
-            url: conf.layers.GFS.URL,
-            params: {
-                'LAYERS': 'region_project',
-                'VERSION': '1.1.1',
-                'p1': '2020-05',
-                'p3': '2020051000'
-            },
-            ratio: 1,
-            projection
-        }),
-        type: 'WMS_LAYER'
-    }),
-    new ol.layer.Image({
-        source: new ol.source.ImageWMS({
-            url: conf.layers.GPM.URL,
-            params: {
-                'LAYERS': 'region_project',
-                'VERSION': '1.1.1',
-                'p1': '2020-05',
-                'p3': '20200510'
-            },
-            ratio: 1,
-            projection
-        }),
-        type: 'WMS_LAYER'
     })
 ]
 
@@ -72,8 +43,9 @@ const map = new ol.Map({
     controls: ol.control.defaults().extend([new ol.control.ScaleLine()])
 });
 
+export { map, projection };
 
-const legend = document.querySelector('#legend');
+/* const legend = document.querySelector('#legend');
 
 const legendSrc1 = tiled[2].getSource().getLegendUrl(map.getView().getResolution(), {
     'SYMBOLSPACE': 5,
@@ -94,6 +66,6 @@ const legendSrc2 = tiled[1].getSource().getLegendUrl(map.getView().getResolution
     'LAYERTITLE': false,
     'TRANSPARENT': true,
     'SLD_VERSION': '1.1.0'
-});
+}); */
 
-legend.innerHTML = `<img src="${legendSrc1}"><img src="${legendSrc2}">`;
+/* legend.innerHTML = `<img src="${legendSrc1}"><img src="${legendSrc2}">`; */

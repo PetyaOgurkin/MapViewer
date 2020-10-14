@@ -15,10 +15,16 @@ const tiles = {
 
 const layers = {
     GFS: {
-        URL: 'http://gis.krasn.ru/mserver/ogc.php?id=7c4fd300-0a9e-87d6-8f6e-444c2b24812f&key=akj7517rj9gdduuj&'
+        URL: 'http://gis.krasn.ru/mserver/ogc.php?id=7c4fd300-0a9e-87d6-8f6e-444c2b24812f&key=akj7517rj9gdduuj&p1=2020-05&p3=2020051006',
+        id: '7c4fd300-0a9e-87d6-8f6e444c2b24812f',
+        key: 'akj7517rj9gdduuj',
+        onMap: false
     },
     GPM: {
-        URL: 'http://gis.krasn.ru/ogc?mguid=e53d0ce24a384888771f2dcd24ef5745_1593980353&id=e2cb3bf9-5c11-ef70-90c6-563045a12e99&key=akj7737z2a5rmeyz&'
+        URL: 'http://gis.krasn.ru/mserver/ogc.php?id=e2cb3bf9-5c11-ef70-90c6-563045a12e99&key=akj7737z2a5rmeyz&p1=2020-06&p3=20200622',
+        id: 'e2cb3bf9-5c11-ef70-90c6-563045a12e99',
+        key: 'akj7737z2a5rmeyz',
+        onMap: false
     }
 }
 
